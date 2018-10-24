@@ -10,9 +10,15 @@ import java.util.List;
  * 
  * @author orlando
  * @version 2.0
+ * Students : vkatneni(01382780)
  */
 public class Inventory {
   private List<Guitar> guitars = new LinkedList<Guitar>();
+
+/*Provide serialNumber,price,builder,model,type,backWood and topWood to add a guitar
+ * Adds a new guitar by providing serialNumber,price,builder,model,type,backWood and topWood
+ */
+
 
   public void addGuitar(String serialNumber, double price,
                         String builder, String model,
@@ -30,6 +36,13 @@ public class Inventory {
     }
     return null;
   }
+
+/*Search by Guitar using Guitar object with parameter(builder,model,type,backWood and topWood) 
+ * the values must be first passed into guitar class and get the guitar object first
+ * @param searchGuitar
+ * @return Guitar or null 
+ */
+
   public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
